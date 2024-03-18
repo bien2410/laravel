@@ -18,9 +18,9 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
-        $categoryName = ["Điện thoại, Đồng hồ, Máy tính"];
         return [
-            "name" => $this->faker->name
+            "name" =>  $this->faker->name,
+            
         ];
     }
 }
