@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ProductController extends Controller
 {
@@ -28,7 +29,15 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new Product();
+        $product->name = $request->name;
+        $product->price = $request->price;
+        $product->sold_quantity = $request->sold_quantity;
+        $product->remain_quantity = $request->remain_quantity;
+        $product->description = $request->description;
+        $product->image_path = $request->image_path;
+        $product->category_id = $request->category_id;
+        $product->save();
     }
 
     /**
@@ -36,7 +45,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+
     }
 
     /**
