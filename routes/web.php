@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,9 @@ Route::prefix('/admin')->group(function () {
 Route::prefix('/frontend')->group(function () {
     Route::get('/', [FrontendController::class, 'index']);
 });
+//REGISTER
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
 // CRUD category
 Route::resource('category', CategoryController::class);
 // CRUD product

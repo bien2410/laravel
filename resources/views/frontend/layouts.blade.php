@@ -19,7 +19,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'ui-sans-serif';
+            font-family: sans-serif;
         }
 
 
@@ -60,7 +60,7 @@
         }
 
         header .right {
-            font-size: 20px;
+            font-size: 17px;
         }
 
         header .right i {
@@ -106,7 +106,8 @@
         }
 
         .nav-item.header a {
-            color: white
+            color: white;
+            font-size: 17px;
         }
 
         .nav-item.header a:hover {
@@ -115,7 +116,7 @@
 
         .session-content {
             padding: 0 70px;
-            height: 1000px;
+
         }
 
         .product-list {
@@ -172,10 +173,99 @@
         .support-icon {
             line-height: 50px;
             background-color: green;
-            width: 46px;
+            width: 40px;
             height: 46px;
             border-radius: 50%;
             color: white;
+            font-size: 12px;
+        }
+
+        .new-small {
+            margin-top: 32px;
+            border: 1px solid #ccc;
+        }
+
+
+        .new-header {
+            padding: 20px;
+            font-weight: 600;
+            border-bottom: 2px solid rgb(162, 219, 148);
+            margin-top: 12px;
+        }
+
+
+        .new-small .date-published,
+        .new-small .content {
+            font-size: 12px;
+        }
+
+
+        .footer {
+            border-top: 1px solid #ccc;
+        }
+
+        .service {
+            margin: 45px 70px;
+        }
+
+        .icon-service {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            border: 1px solid rgb(120, 202, 100);
+            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+        }
+
+        .content-service {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .header-content {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .detail-content {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        .contact-footer {
+            background-color: rgb(250, 250, 250);
+            height: 400px;
+            padding: 72px 198px;
+        }
+
+        .contact-item .header {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .contact-item a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            margin-bottom: 12px;
+        }
+
+        .navbar-footer {
+            background-color: #464646;
+        }
+
+        .footer ul {
+            height: 45px;
+
+        }
+
+        .footer .nav-link a {
+            height: 45px;
+            line-height: 45px;
         }
     </style>
 </head>
@@ -260,8 +350,8 @@
             <div class="col-2 sidebar">
                 <ul class="nav flex-column">
                     <li class="nav-item header ">
-                        <a class="nav-link " style="padding: 15px 25px" @disabled(true)>Danh mục sản
-                            phẩm</a>
+                        <a class="nav-link " style="padding: 15px 25px" @disabled(true)>DANH MỤC SẢN
+                            PHẨM</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sản phẩm hot</a>
@@ -302,8 +392,8 @@
         </div>
         <div class="row mt-2 session-content">
             <div class="col-2">
-                <div class="support">
-                    <div class="support-header ">
+                <div class="row support">
+                    <div class="support-header">
                         <p>HỖ TRỢ TRỰC TUYẾN</p>
                     </div>
                     <div class="row infor-list">
@@ -335,6 +425,23 @@
                                 Mrs.Chung: 0999.911.911</p>
                         </div>
                     </div>
+                </div>
+
+                <div class="row new-small">
+                    <p class="new-header">TIN TỨC</p>
+                    <a
+                        href="https://www.24h.com.vn/thoi-trang-hi-tech/lo-trinh-san-xuat-iphone-man-hinh-gap-iphone-se-4-bat-ngo-bi-ven-man-c407a1552164.html"><img
+                            src="{{ URL::asset('image/anh1.jpg') }}" alt="Ảnh" height="230px"
+                            width="100%"></a>
+                    <p class="new-title mt-3 fs-5">Lộ trình sản xuất iPhone màn hình gập, iPhone SE 4 bất ngờ bị
+                        vén
+                        màn</p>
+                    <p class="date-published">Thứ Ba, ngày 19/03/2024 06:00 AM (GMT+7)</p>
+                    <p class="content">Theo đúng lịch trình, Samsung sẽ trình làng các mẫu smartphone màn hình gập mới
+                        nhất của mình, Galaxy Z Fold 6 và Galaxy Z Flip 6 vào mùa thu này tại sự kiện Galaxy Unpacked.
+                        Trong khi các tin đồn trước đó khẳng định thông tin về Galaxy Z Fold 6 Ultra cao cấp, các nguồn
+                        tin mới nhất lại cho thấy điều ngược lại. Thay vì Galaxy Z Fold 6 Ultra, Samsung đang sản xuất
+                        một ...</p>
                 </div>
             </div>
             <div class="col-10 product-list">
@@ -409,7 +516,114 @@
     </div>
 
 
+    <div class="footer">
+        <div class="container">
+            <div class="row service">
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-3 icon-service">
+                            <i class="fa-solid fa-truck" style="color: #78ca64;"></i>
+                        </div>
+                        <div class="col-9 content-service">
+                            <p class="header-content">MIỄN PHÍ GIAO HÀNG</p>
+                            <p class="detail-content">Miễn phí giao hàng trong nội thành hà nội</p>
+                        </div>
 
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-3 icon-service">
+                            <i class="fa-solid fa-gift" style="color: #78ca64;"></i>
+                        </div>
+                        <div class="col-9 content-service">
+                            <p class="header-content">KHUYẾN MÃI</p>
+                            <p class="detail-content">Khuyến mãi sản phẩm nếu đơn hàng trên 1.000.000đ </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-3 icon-service">
+                            <i class="fa-solid fa-shield-halved" style="color: #78ca64;"></i>
+                        </div>
+                        <div class="col-9 content-service">
+                            <p class="header-content">HOÀN TRẢ LẠI TIỀN</p>
+                            <p class="detail-content">Nếu sản phẩm không đảm bảo chất lượng hoặc sản phẩm không đúng
+                                miêu
+                                tả</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row contact-footer">
+                <div class="col-3 contact-item">
+                    <p class="header">VỀ CHÚNG TÔI</p>
+                    <a href="">Trang chủ</a>
+                    <a href="">Giới thiệu</a>
+                    <a href="">Tin tức</a>
+                    <a href="">Liên hệ</a>
+                </div>
+
+
+                <div class="col-3 contact-item">
+                    <p class="header">HƯỚNG DẪN</p>
+                    <a href="">Hướng dẫn mua hàng</a>
+                    <a href="">Giao nhận và thanh toán</a>
+                    <a href="">Đổi trả và bảo hành</a>
+                    <a href="">Đăng ký thành viên</a>
+                </div>
+
+                <div class="col-3 contact-item">
+                    <p class="header">CHÍNH SÁCH</p>
+                    <a href="">Chính sách thanh toán</a>
+                    <a href="">Chính sách vận chuyển</a>
+                    <a href="">Chính sách đổi trả</a>
+                    <a href="">Chính sách bảo hàng</a>
+                </div>
+
+                <div class="col-3 contact-item">
+                    <p class="header">ĐIỀU KHOẢN</p>
+                    <a href="">Điều khoản sử dụng</a>
+                    <a href="">Điều khoản giao dịch</a>
+                    <a href="">Dịch vụ tiện ích</a>
+                    <a href="">Quyền sở hữu trí tuệ</a>
+                </div>
+            </div>
+
+            <div class="row navbar-footer align-items-center">
+                <div class="col-6 text-white">
+                    <p class="mb-0 text-center">
+                        <i class="fa-regular fa-copyright" style="color: #d7d6d6;"></i>
+                        Bản quyền thuộc về Avent Team
+                    </p>
+                </div>
+                <div class="col-6">
+                    <nav class="navbar navbar-expand-sm ">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link " href="#">Trang chủ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#">Giới thiệu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#">Sản phẩm</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="#">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
